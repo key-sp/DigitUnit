@@ -9,7 +9,7 @@ There is also an overload using double , but it can only represent a smaller num
 ![DigitUnit](https://user-images.githubusercontent.com/33142993/214645250-920d6165-0132-4331-8887-7a2e2d6f4edf.gif)
 
 The list of digitunit is generated with the code below.
-```
+```C#
   public static string GetDigitUnit(int numberOfDigits)
   {
       if (DigitUnit.digitSymbolList == null)
