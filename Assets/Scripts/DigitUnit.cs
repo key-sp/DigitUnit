@@ -22,7 +22,7 @@ public static class DigitUnit
         var firstThreeDigit = value.ToString("E2").Substring(0, 4);
 
         // get number of digits.
-        var numberOfDigit = (int)Math.Truncate(Math.Log10(value));
+        var numberOfDigit = value == 0 ? 0 : (int)Math.Truncate(Math.Log10(value));
 
         // Increment units by three digits.
         var (quotient, remainder) = GetDevideByThree(numberOfDigit);
@@ -49,7 +49,7 @@ public static class DigitUnit
         var firstThreeDigit = value.ToString("E2").Substring(0, 4);
 
         // get number of digits.
-        var numberOfDigit = (int)Math.Truncate(BigInteger.Log10(value));
+        var numberOfDigit = value == 0 ? 0 : (int)Math.Truncate(BigInteger.Log10(value));
 
         // Increment units by three digits.
         var (quotient, remainder) = GetDevideByThree(numberOfDigit);

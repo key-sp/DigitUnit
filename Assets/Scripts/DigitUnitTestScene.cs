@@ -17,7 +17,9 @@ public class DigitUnitTestScene : MonoBehaviour
         }).AddTo(this);
 
         this.ObserveEveryValueChanged(x => x.inputField.text).Skip(1).Subscribe(inputText => {
-            inputText ??= string.Empty;
+            if (inputText == string.Empty)
+                inputText = "0";
+                
             this.convertToNumberWithDigitUnit(BigInteger.Parse(inputText));
         }).AddTo(this);
     }
